@@ -8,12 +8,12 @@
             type="video/mp4">
     </video>
     <script>
-        document.getElementById('vid').currentTime = 1500;
+        var url = window.location.href;
+        url.split('?')[1];
+        document.querySelector('vid').setAttribute('src', url);
     </script>
     <script>
-        var url = window.location.href;
-        url.split('?open=')[1];
-        document.querySelector('vid').setAttribute('src', url);
+        document.getElementById('vid').currentTime = 1500;
     </script>
 </body>
 
