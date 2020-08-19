@@ -2,6 +2,7 @@
 <html>
 
 <body>
+    <p id="p1"></p>
     <video id="vid" autoplay>
         <source id="vid_source"
             src=""
@@ -21,6 +22,7 @@
         var url = GetURLParameter('url')
         var videosource = document.getElementById('vid_source');
         videosource.setAttribute('src', url);
+        document.getElementById("p1").innerHTML = url;
         //time stamp
         document.getElementById('vid').currentTime = 1500;
     </script>
