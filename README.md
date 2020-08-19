@@ -1,1 +1,3 @@
-# test.github.io
+---
+permalink: /index.html
+---
