@@ -24,7 +24,12 @@
         videosource.setAttribute('src', url);
         document.getElementById("p1").innerHTML = url;
         //time stamp
-        document.getElementById('vid').currentTime = 1500;
+        var time = GetURLParameter('time')
+        if(time != undefined)
+        {
+            document.getElementById('vid').currentTime = time;
+        }
+        
     </script>
 </body>
 
