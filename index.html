@@ -14,7 +14,7 @@
             background-color: #FFFFFF;
         }
         
-        #vid-container {
+        #back-container {
             display: flex;
             flex-direction: row;
             height: 100%;
@@ -36,9 +36,16 @@
             color: white;
         }
         
+        #vid-container {
+            position: absolute;
+            top: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+        }
+        
         #vid {
             display: block;
-            position: absolute;
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -49,17 +56,20 @@
 </head>
 
 <body>
-    <div id="vid-container">
+    <div id="back-container">
         <div id="icon">
             🎞
         </div>
         <div id="text">
             Loading...
         </div>
+    </div>
+    <div id="vid-container">
         <video id="vid" autoplay>
             <source id="vid_source" src="" type="video/mp4">
         </video>
     </div>
+
     <script>
         function GetURLParameter(sParam) {
             var sPageURL = window.location.search.substring(1);
