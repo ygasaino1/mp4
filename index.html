@@ -72,6 +72,7 @@
     <script>
         function GetURLParameter(sParam) {
             var sPageURL = window.location.search.substring(1);
+            sPageURL = decodeURI(sPageURL); // Testing Phase <----------------------------- Testing Phase
             var sURLVariables = sPageURL.split('[&]');
             for (var i = 0; i < sURLVariables.length; i++) {
                 var sParameterName = sURLVariables[i].split('[=]');
